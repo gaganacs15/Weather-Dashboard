@@ -1,0 +1,269 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Main Container */
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+/* Sections */
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: #2193b0;
+    margin-bottom: 15px;
+}
+
+/* Search Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2193b0;
+    box-shadow: 0 0 5px rgba(33, 147, 176, 0.3);
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    background: #2193b0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #176b85;
+}
+
+button:focus-visible {
+    outline: 3px solid #8bd8ec;
+    outline-offset: 2px;
+}
+
+/* Status Message */
+#status {
+    text-align: center;
+    color: #555;
+    font-weight: bold;
+}
+
+#status.error {
+    color: #d93025;
+}
+
+/* Weather Card */
+.weather-card {
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    border: 1px solid #b8e5ed;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Weather Heading */
+.weather-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.weather-heading h3 {
+    font-size: 24px;
+    color: #176b85;
+}
+
+#dateText {
+    color: #777;
+    font-size: 14px;
+}
+
+#weatherIcon {
+    font-size: 55px;
+}
+
+/* Main Weather Details */
+.main-weather {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.main-weather h1 {
+    font-size: 55px;
+    color: #2193b0;
+}
+
+#condition {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#feelsLike {
+    color: #777;
+}
+
+/* Weather Information Grid */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.details-grid article {
+    background: white;
+    padding: 18px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.details-grid h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #176b85;
+}
+
+.details-grid p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Search History */
+.history-section ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.history-section li button {
+    background: #e3f2fd;
+    color: #176b85;
+    border: 1px solid #b8d9ed;
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
+.history-section li button:hover {
+    background: #2193b0;
+    color: white;
+}
+
+#emptyHistory {
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background: #176b85;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-weather {
+        gap: 15px;
+    }
+
+    .main-weather h1 {
+        font-size: 40px;
+    }
+
+    #weatherIcon {
+        font-size: 40px;
+    }
+
+    .weather-heading h3 {
+        font-size: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .history-section li button {
+        width: auto;
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🌤 Weather Dashboard</h1>
+        <p>Check weather conditions of any city</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- City Search -->
+        <section>
+            <h2>Search City</h2>
+
+            <form id="searchForm">
+
+                <label for="cityInput">Enter City Name:</label>
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name"
+                    required
+                >
+
+                <button type="submit" id="searchButton">
+                    Search
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Status Message -->
+        <section>
+            <p id="status" role="status">
+                Search for a city to get started.
+            </p>
+        </section>
+
+        <!-- Weather Details -->
+        <section id="weatherCard" class="weather-card hidden">
+
+            <h2>Current Weather</h2>
+
+            <div class="weather-heading">
+
+                <div>
+                    <h3 id="placeName">City Name</h3>
+                    <p id="dateText">Date and Time</p>
+                </div>
+
+                <div>
+                    <span id="weatherIcon">☀️</span>
+                </div>
+
+            </div>
+
+            <!-- Temperature -->
+            <div class="main-weather">
+
+                <h1>
+                    <span id="temperature">--</span> °C
+                </h1>
+
+                <div>
+                    <p id="condition">Weather Condition</p>
+                    <p id="feelsLike">Feels like --°C</p>
+                </div>
+
+            </div>
+
+            <!-- Weather Information -->
+            <div class="details-grid">
+
+                <article>
+                    <h3>💧 Humidity</h3>
+                    <p id="humidity">--%</p>
+                </article>
+
+                <article>
+                    <h3>💨 Wind Speed</h3>
+                    <p id="wind">-- km/h</p>
+                </article>
+
+                <article>
+                    <h3>🌡 Temperature</h3>
+                    <p id="temperatureDetail">--°C</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Search History -->
+        <section class="history-section">
+
+            <h2>Search History</h2>
+
+            <ul id="historyList">
+                <!-- History will be displayed here -->
+            </ul>
+
+            <p id="emptyHistory">
+                No search history available.
+            </p>
+
+            <button type="button" id="clearHistory">
+                Clear History
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Weather Dashboard</p>
+        <p>Created using HTML, CSS and JavaScript</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
